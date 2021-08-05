@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Manrope:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>NMㅣWeb-Developer</title>
+</head>
+<body class="body">
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <section class="sidebar">
+            <div class='sidebar__menu'>
+                <ul>
+                    <li><a id = 'sidebar__menu_1' onclick="scroll_top()">N</a></li>
+                    <li><a id = 'sidebar__menu_2' onclick="scroll_top()">N</a></li>
+                    <li><a id = 'sidebar__menu_3' onclick="scroll_top()">Web-Developer</a></li>
+                    <li><a onclick="scroll_about()">About</a></li> 
+                    <li><a onclick="scroll_Projects()">Projects</a></li>
+                    <li><a onclick="open_linkedin()">Resume</a></li>
+                    <li><a onclick="scroll_contact()">Contact Me</a></li> 
+                </ul>
+            </div>
+            <div class="sidebar__icons">
+                <ul>
+                    <li class="fab fa-linkedin-in" onclick="open_linkedin()"></li>
+                    <li class="fab fa-codepen" onclick="open_codepen()"></li>
+                    <li class="fab fa-github" onclick="open_github()"></li>
+                </ul>
+            </div>
+    </section>
+    <section class="hamburger">
+        <div class="wrapper">
+            <input type="checkbox" class='toggle'>
+            <div class="menu">
+              <div class="line"></div>
+              <div class="options">
+                <ol>
+                    <li><a onclick="scroll_about()">About</a></li> 
+                    <li><a onclick="scroll_Projects()">Projects</a></li>
+                    <li><a onclick="open_linkedin()">Resume</a></li>
+                    <li><a onclick="scroll_contact()">Contact Me</a></li> 
+                </ol>
+                <div class="sidebar__icons">
+                    <ul>
+                        <li class="fab fa-linkedin-in" onclick="open_linkedin()"></li>
+                        <li class="fab fa-codepen" onclick="open_codepen()"></li>
+                        <li class="fab fa-github" onclick="open_github()"></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>          
+    </section>
+    <section id='frontPage' class="frontPage">
+        <div class='firstPage'>
+                <h1><div class='firstPage__helloWorld'> Hello world <span class="wave">👋</span></div><br>I'm Nathan,<br>Web-Developer
+                </h1>
+                <small>A.I. Researcher | UI/UX Designer</small>
+                <button class='btn' onclick="scroll_contact()">Contact Me!</button>  
+        </div>
+    </section>
+    <section id='Projects' class='portfolioPage'>
+        <div class='heading'>My Portfolio</div>
+        <p class="portfolio__writing">Here I have included recent small projects I have been a part of. It's only a drop in the ocean comprated to the entire list. </p>
+        <div class="cards">
+            <div class="childCard" onclick="open_codepen_guessTheNumber()"></div>
+            <div class="childCard" onclick="open_codepen_rollTheDice()"></div>
+            <div class="childCard" onclick="open_codepen_newYearCountDown()"></div>
+            <div class="childCard" onclick="open_codepen_hangMan()"></div>
+            <div class="childCard" onclick="open_codepen_meals()"></div>
+            <div class="childCard" onclick="open_codepen_billTracker()"></div>
+            <div class="childCard" onclick="open_codepen_lyricFinder()"></div>
+            <div class="childCard" onclick="open_codepen_flashCards()"></div>
+        </div>
+    </section>
+    <section  id='about' class="aboutMe">
+        <div class="about">
+            <h2 class="heading">About Me</h2>
+            <p class="portfolio__writing">Ever since I was a little kid, programming and engineering have been a passion of mine. I still recall sitting in front of my desktop and attempting to sort out a coherent method to make the processor run faster. As I went through the basic tutorials, I remember how it almost felt like magic, being able to get the computer to do whatever I wanted. As I advanced in my education, I latched to any ideas and projects I could get, moving from “Hello World” all the way to advanced A.I. machine learning algorithms.<br><br>
+            The primary area of interest is front-end. I currently work remotely with a selected freelance clients base and I'm open for new opportunities.</p>
+        </div>
+        <div class="skills"></div>
+    </section>
+    <section id='contactMe' class="contactMe">
+            <div class="heading">Contact Me</div>
+            <form id='form' action="POST" data-netlify='true'>
+                <div class="form-control">
+                    <input type="text" minlength="3" class='inputName' id="inputName" name='name' placeholder="Name" required>
+                </div>
+                <div class="form-control">
+                    <input type="email" class='inputEmail' id="inputEmail" name='email' placeholder="Email" required>
+                </div>
+                <div class="form-control">
+                    <input type="text" minlength="5" class='inputSubject' id="inputSubject" name='subject' placeholder="Subject" required>
+                </div>
+                <div class="form-control">
+                    <textarea name="textMessage" minlength="5" cols="40" rows="5" class='inputMessage' name='message' placeholder="Message" id="inputMessage" required></textarea>
+                </div>
+                <div class="field"><div data-netlify-recaptcha="true" ></div></div>
+                <button type="submit" class="btn">Submit</button>
+            </form>       
+    </section>
+    <span class="tag_end_body"></span> 
+    <section class="footer">
+        <footer>
+            <div class="footer__about">
+                Design was inspired by @jacekjeznach.</div>
+            <div class="footer__location"><i class="fas fa-map-marker-alt"></i> Daejeon, South Korea</div>
+            <div class="footer__copyright">&copy;2021   </div>
+        </footer>
+    </section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
